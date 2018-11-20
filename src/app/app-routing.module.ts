@@ -6,6 +6,7 @@ import { AdminGuard } from './auth/admin.guard';
 // Page components
 import { HomeComponent } from './pages/home/home.component';
 import { CallbackComponent } from './pages/callback/callback.component';
+import { ProductListComponent } from './pages/product-list/product-list.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,11 @@ const routes: Routes = [
     path: 'callback',
     component: CallbackComponent
   },
-  {
+   {
+    path:'products',
+    component: ProductListComponent
+  },
+   {
     path: 'admin',
     loadChildren: './pages/admin/admin.module#AdminModule',
     canActivate: [

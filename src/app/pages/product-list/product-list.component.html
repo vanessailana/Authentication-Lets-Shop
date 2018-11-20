@@ -1,0 +1,35 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="container">
+  <h1>
+    Products We Offer
+  </h1>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>Product Name</td>
+        <td>Aisle Name</td>
+        <td>Department Name</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of products | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 5,
+                                                      currentPage: page,
+                                                      totalItems: totalRec }">
+        <td>{{emp.title}}</td>
+
+        <td>{{emp.aisle.name}}</td>
+
+
+        <td>{{emp.department.title}}</td>
+
+
+    </tr>
+    </tbody>
+  </table>
+  <div>
+    <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+  </div>
+</div>
