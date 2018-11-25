@@ -1,15 +1,16 @@
+
 import { Component, OnInit,Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Product } from './product.model';
+import{Product}  from '../models/product.model';
 import { ProductsService } from '../../shared/products/products.service';
 import {Headers, Response} from '@angular/http';
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'admin-product-list',
+  templateUrl: './admin-product-list.component.html',
+  styleUrls: ['./admin-product-list.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class  AdminProductListComponent implements OnInit {
   products: Product[];
    totalRec : number;
   page: number = 1;
@@ -58,4 +59,3 @@ export class ProductListComponent implements OnInit {
   }
 
 }
-

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild, ElementRef, PipeTransform, Pipe, OnInit } from '@angular/core';
+import { DomSanitizer } from "@angular/platform-browser";
+
+
 import { fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 

@@ -1,0 +1,44 @@
+
+<h2 style="text-align: center">Just in case, if you want help <i class="fa fa-smile-o"></i> </h2>
+<div class="container" style="margin-left: 300px">
+  <div class="grid">
+    <div class="col-6">
+        <div class="result">
+          <span>
+            Result : {{result}}
+          </span>
+        </div>
+        </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="operation">
+          <div class="row">
+            <div class="col-12">
+              <input [(ngModel)]="number1" type="number" name="" placeholder="number">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <input [(ngModel)]="number2" type="number" name="" placeholder="number">
+            </div>
+          </div>
+          <div>
+            <div class="button-group">
+<button (click)="add()" class="button">
+                +
+              </button>
+              <button (click)="sub()" class="button">
+                -
+              </button>
+                <button (click)="mult()" class="button">
+                *
+              </button>
+                <button (click)="divide()" class="button">
+                %
+              </button>
+          </div>
+
+</div>
+
+</div>

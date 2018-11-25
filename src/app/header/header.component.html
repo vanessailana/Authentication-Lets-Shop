@@ -8,7 +8,8 @@
 <i class="fa fa-money"></i></a>
       <a class="nav-item nav-link" href="#">What Most People Bought
 <i class="fa fa-cutlery" aria-hidden="true"></i></a>
-      <a class="nav-item nav-link" href="/products">Products We Offer <i class="fa fa-shopping-cart"></i></a>
+      <a class="nav-item nav-link"  *ngIf="!auth.loggedIn" href="/offered" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Products We Offer <i class="fa fa-shopping-cart"></i></a>
 
     </div>
   </div>
@@ -38,31 +39,30 @@
 </nav>
   <nav id="nav" class="nav" role="navigation">
     <ul class="nav-list">
-      <li>
-        <a
-          routerLink="/"
+ <a  type="button" class="btn btn-primary btn-lg"
+          routerLink="/calc" *ngIf="auth.loggedIn && !auth.isAdmin"
           routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }">Events</a>
-      </li>
-      <li>
-        <a
-          *ngIf="auth.loggedIn"
-          routerLink="/my-rsvps"
-          routerLinkActive="active">My RSVPs</a>
-      </li>
-      <li>
-        <a
-          *ngIf="auth.loggedIn && auth.isAdmin"
+          [routerLinkActiveOptions]="{ exact: true }">Calculator <i class="fa fa-calculator"></i></a>
+          &nbsp;
+        <a  type="button"   *ngIf="auth.loggedIn && !auth.isAdmin" class="btn btn-primary btn-lg" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          routerLink="/chat" >Need Help? <i class='fa fa-comment'></i></a>
+          &nbsp;
+<div class="container">
+<a type="button" *ngIf="auth.loggedIn && auth.isAdmin" class="btn btn-primary btn-lg"
+
           routerLink="/admin"
           routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }">Admin</a>
-      </li>
-      <li>
-        <a
-          *ngIf="auth.loggedIn && auth.isAdmin"
-          routerLink="/admin/event/new"
-          routerLinkActive="active">Create Event</a>
-      </li>
+          [routerLinkActiveOptions]="{ exact: true }">Admin Dashboard <i class="fa fa-child"></i></a>
+
+   &nbsp;
+</div>
+<a type="button" class="btn btn-primary btn-lg" *ngIf="auth.loggedIn && !auth.isAdmin"
+
+          routerLink="/offered"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Products Sold
+<i class="fa fa-shopping-bag"></i></a>
     </ul>
   </nav>
 
