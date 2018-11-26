@@ -20,6 +20,8 @@ import { HelpAppComponent } from './pages/help-app/help-app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
 import { AdminProductListComponent } from './pages/admin-product-list/admin-product-list.component';
+import { DepartmentsComponent } from './pages/departments/departments.component';
+import { AislesComponent } from './pages/aisles/aisles.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { AdminProductListComponent } from './pages/admin-product-list/admin-prod
     HeaderComponent,
     FooterComponent,
     CallbackComponent,
-    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent
+    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent
   ],
   imports: [
     BrowserModule,
