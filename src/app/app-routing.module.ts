@@ -22,11 +22,14 @@ const routes: Routes = [
   },
   {
     path: 'departments',
-    component: DepartmentsComponent
+    component: DepartmentsComponent,  canActivate: [
+      AuthGuard,AdminGuard
   },
    {
     path: 'editdepartments',
-    component: EditDepartmentComponent
+    component: EditDepartmentComponent, canActivate: [
+      AuthGuard,AdminGuard
+    ]
   },
    {
     path: 'adminproductpanel',
@@ -39,12 +42,6 @@ const routes: Routes = [
     path: 'offered',
     component: ProductListComponent
   },
- {
-    path: 'chat',
-    component: HelpAppComponent,canActivate: [
-      AuthGuard
-  },
-
 
  {
     path: 'create',
@@ -54,6 +51,12 @@ const routes: Routes = [
   {
     path: 'callback',
     component: CallbackComponent
+  },
+  {
+    path: 'chat',
+    component: HelpAppComponent,  canActivate: [ AuthGuard
+
+    ]
   },
     {
     path: 'admin', component:AdminComponent,

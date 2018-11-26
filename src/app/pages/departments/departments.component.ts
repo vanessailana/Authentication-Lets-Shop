@@ -10,7 +10,7 @@ import {Headers, Response} from '@angular/http';
 })
 
 export class DepartmentsComponent implements OnInit {
-departments: Department[];
+
 departments: Array<any>;
  totalRec : number;
   page: number = 1;
@@ -23,6 +23,12 @@ departments: Array<any>;
       this.departments = data;
     });
   }
+
+    editDepartmentPage(department: Department) {
+    this.departmentService.setter(department);
+     this.router.navigate(['/editdepartments']);
+  }
+
 
     private loadProd(){
 
