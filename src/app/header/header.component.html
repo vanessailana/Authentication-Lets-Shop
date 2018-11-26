@@ -2,14 +2,28 @@
 
 <nav class="navbar navbar-dark bg-dark mb-5">
   <a class="navbar-brand" href="/">LetsShop <i class="fa fa-shopping-cart"></i></a>
+
+&nbsp;
+
   <div class="navbar-expand mr-auto">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="#">Top Deals
 <i class="fa fa-money"></i></a>
+
+&nbsp;
+
       <a class="nav-item nav-link" href="#">What Most People Bought
 <i class="fa fa-cutlery" aria-hidden="true"></i></a>
+
+&nbsp;
+
       <a class="nav-item nav-link"  *ngIf="!auth.loggedIn" href="/offered" routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }">Products We Offer <i class="fa fa-shopping-cart"></i></a>
+
+&nbsp;
+
+         <a class="nav-item nav-link"  *ngIf="!auth.loggedIn" href="/offered" routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Questions? Lets Chat<i class='fa fa-comment'></i> </a>
 
     </div>
   </div>
@@ -20,7 +34,7 @@
         <a *ngIf="!auth.loggedIn"  style="color:white" class="nav-item nav-link" (click)="auth.login()">
         Signup or Login</a>
         <span *ngIf="auth.loggedIn && auth.userProfile">
-          <a routerLink="/my-rsvps">{{ auth.userProfile.name }}</a>
+          <a routerLink="/">{{ auth.userProfile.name }}</a>
           <span class="divider">|</span>
           <a (click)="auth.logout()" style="color:white">Log Out</a>
         </span>

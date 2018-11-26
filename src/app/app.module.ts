@@ -8,7 +8,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { ProductsService } from './shared/products/products.service';
 import { AuthService } from './auth/auth.service';
 import { CallbackComponent } from './pages/callback/callback.component';
@@ -30,7 +29,6 @@ import { EditAislesComponent } from './pages/aisles/edit-aisles/edit-aisles.comp
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent,
     CallbackComponent,
     AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent, EditDepartmentComponent, EditAislesComponent
   ],

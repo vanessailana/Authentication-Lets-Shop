@@ -42,7 +42,10 @@ const routes: Routes = [
       AuthGuard,AdminGuard
     ]
   },
-
+  {
+    path: 'chat',
+    component: HelpAppComponent
+  },
   {
     path: 'offered',
     component: ProductListComponent
@@ -74,12 +77,7 @@ const routes: Routes = [
     redirectTo: '',
     pathMatch: 'full'
   },
-  {
-    path:'chat',
-    component: HelpAppComponent, canActivate: [
-      AuthGuard,AdminGuard
-    ]
-  },
+
    {
     path:'calc',
     component: CalculatorComponent,  canActivate: [
