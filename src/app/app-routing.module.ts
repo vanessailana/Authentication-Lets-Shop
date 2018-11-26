@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// Route guards
 import { AdminComponent } from './pages/admin/admin.component';
 import { AuthGuard } from './auth/auth.guard';
 import { AdminGuard } from './auth/admin.guard';
@@ -12,11 +11,22 @@ import { CalculatorComponent } from './pages/calculator/calculator.component';
 import { HelpAppComponent } from './pages/help-app/help-app.component';
 import { AdminProductListComponent } from './pages/admin-product-list/admin-product-list.component';
 import { CreateProductComponent } from './pages/create-product/create-product.component';
+import { AislesComponent } from './pages/aisles/aisles.component';
+import { DepartmentsComponent } from './pages/departments/departments.component';
+import { EditDepartmentComponent } from './pages/departments/edit-department/edit-department.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'departments',
+    component: DepartmentsComponent
+  },
+   {
+    path: 'editdepartments',
+    component: EditDepartmentComponent
   },
    {
     path: 'adminproductpanel',
@@ -34,12 +44,12 @@ const routes: Routes = [
     component: HelpAppComponent,canActivate: [
       AuthGuard
   },
+
+
  {
     path: 'create',
     component: CreateProductComponent
   },
-
-
 
   {
     path: 'callback',

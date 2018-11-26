@@ -22,6 +22,7 @@ import { CreateProductComponent } from './pages/create-product/create-product.co
 import { AdminProductListComponent } from './pages/admin-product-list/admin-product-list.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { AislesComponent } from './pages/aisles/aisles.component';
+import { EditDepartmentComponent } from './pages/departments/edit-department/edit-department.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AislesComponent } from './pages/aisles/aisles.component';
     HeaderComponent,
     FooterComponent,
     CallbackComponent,
-    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent
+    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent, EditDepartmentComponent
   ],
   imports: [
     BrowserModule,
