@@ -36,4 +36,8 @@ aisles: Array<any>;
                 //console.log(JSON.stringify(resp.json()));
             })
   }
+    editAislePage(aisle: Aisle) {
+    this.aisleService.setter(aisle);
+     this.router.navigate(['/editaisle']);
+  }
 }

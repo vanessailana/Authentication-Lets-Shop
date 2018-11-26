@@ -23,6 +23,7 @@ import { AdminProductListComponent } from './pages/admin-product-list/admin-prod
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { AislesComponent } from './pages/aisles/aisles.component';
 import { EditDepartmentComponent } from './pages/departments/edit-department/edit-department.component';
+import { EditAislesComponent } from './pages/aisles/edit-aisles/edit-aisles.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { EditDepartmentComponent } from './pages/departments/edit-department/edi
     HeaderComponent,
     FooterComponent,
     CallbackComponent,
-    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent, EditDepartmentComponent
+    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent, EditDepartmentComponent, EditAislesComponent
   ],
   imports: [
     BrowserModule,

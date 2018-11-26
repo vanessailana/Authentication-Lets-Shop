@@ -1,4 +1,4 @@
-<h1 style="text-align: center">Departments</h1>
+<h1 style="text-align: center">Aisles</h1>
    <nav class="navbar">
       <input class="form-control" placeholder="search by name" type="text" name="search" [(ngModel)]="filter">
     </nav>
@@ -20,7 +20,7 @@
                                                       totalItems: totalRec };let i = index">
         <td>{{user.name}}</td>
 
- <td><button class="btn btn-danger"> Edit </button></td>
+ <td><button class="btn btn-danger"  (click)="editAislePage(user)"> Edit </button></td>
 
  <td></td>
     </tr>

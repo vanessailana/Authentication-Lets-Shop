@@ -14,11 +14,16 @@ import { CreateProductComponent } from './pages/create-product/create-product.co
 import { AislesComponent } from './pages/aisles/aisles.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { EditDepartmentComponent } from './pages/departments/edit-department/edit-department.component';
+import { EditAislesComponent } from './pages/aisles/edit-aisles/edit-aisles.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+    {
+    path: 'editaisle',
+    component: EditAislesComponent
   },
   {
     path: 'departments',
@@ -59,7 +64,9 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'aisle', component:AislesComponent,
+    path: 'aisles', component:AislesComponent, canActivate: [AdminGuard, AuthGuard
+
+    ]
 
   },
   {
