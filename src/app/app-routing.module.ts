@@ -52,17 +52,15 @@ const routes: Routes = [
     path: 'callback',
     component: CallbackComponent
   },
-  {
-    path: 'chat',
-    component: HelpAppComponent,  canActivate: [ AuthGuard
-
-    ]
-  },
     {
     path: 'admin', component:AdminComponent,
     canActivate: [AdminGuard, AuthGuard
 
     ]
+  },
+  {
+    path: 'aisle', component:AislesComponent,
+
   },
   {
     path: '**',
@@ -71,7 +69,9 @@ const routes: Routes = [
   },
   {
     path:'chat',
-    component: HelpAppComponent
+    component: HelpAppComponent, canActivate: [
+      AuthGuard,AdminGuard
+    ]
   },
    {
     path:'calc',
