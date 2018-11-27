@@ -41,8 +41,7 @@ const routes: Routes = [
     component: AdminProductListComponent,canActivate: [
       AuthGuard,AdminGuard
     ]
-  },
-  {
+  },{
     path: 'chat',
     component: HelpAppComponent
   },

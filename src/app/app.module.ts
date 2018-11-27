@@ -23,6 +23,7 @@ import { DepartmentsComponent } from './pages/departments/departments.component'
 import { AislesComponent } from './pages/aisles/aisles.component';
 import { EditDepartmentComponent } from './pages/departments/edit-department/edit-department.component';
 import { EditAislesComponent } from './pages/aisles/edit-aisles/edit-aisles.component';
+import { CreateOrdersComponent } from './pages/create-orders/create-orders.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { EditAislesComponent } from './pages/aisles/edit-aisles/edit-aisles.comp
     HomeComponent,
     HeaderComponent,
     CallbackComponent,
-    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent, EditDepartmentComponent, EditAislesComponent
+    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent, EditDepartmentComponent, EditAislesComponent, CreateOrdersComponent
   ],
   imports: [
     BrowserModule,

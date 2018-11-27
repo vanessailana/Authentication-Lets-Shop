@@ -3,4 +3,6 @@ export class Product {
     title: string;
     aisleId: number;
     departmentId: number;
+    active:boolean;
+    price: number;
 }
