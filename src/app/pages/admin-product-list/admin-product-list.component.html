@@ -19,6 +19,8 @@
         <td>Product Name</td>
         <td>Aisle Name</td>
         <td>Department Name</td>
+        <td>Price</td>
+        <td>Active?</td>
         <td>Delete?</td>
         <td>Edit Product</td>
       </tr>
@@ -34,6 +36,12 @@
 
 
         <td>{{user.department.title}}</td>
+
+
+        <td>{{user.price}}</td>
+
+
+        <td>{{user.active}}</td>
 
   <td><button class="btn btn-danger" (click)="deleteProduct(user)"> Delete</button></td>
 

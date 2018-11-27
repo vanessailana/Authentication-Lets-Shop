@@ -22,7 +22,7 @@ private product:Product;
        this._productService.createProduct(this.product).subscribe((product)=>{
          console.log(product);
          alert("Product has just been added")
-         this._rotuer.navigate(['/products']);
+         this._rotuer.navigate(['/offered']);
        },(error)=>{
          console.log(error);
        });
