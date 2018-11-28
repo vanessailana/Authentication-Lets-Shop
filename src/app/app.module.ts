@@ -25,6 +25,8 @@ import { EditDepartmentComponent } from './pages/departments/edit-department/edi
 import { EditAislesComponent } from './pages/aisles/edit-aisles/edit-aisles.component';
 import { CreateOrdersComponent } from './pages/create-orders/create-orders.component';
 import { WhensBestTimeOrderComponent } from './pages/whens-best-time-order/whens-best-time-order.component';
+import { ComponentComponent } from './pages/component/component.component';
+import { ItemsFreqPurchasedComponent } from './pages/items-freq-purchased/items-freq-purchased.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { WhensBestTimeOrderComponent } from './pages/whens-best-time-order/whens
     HomeComponent,
     HeaderComponent,
     CallbackComponent,
-    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent, EditDepartmentComponent, EditAislesComponent, CreateOrdersComponent, WhensBestTimeOrderComponent
+    AdminComponent,ProductListComponent, CalculatorComponent, HelpAppComponent,  CreateProductComponent,  AdminProductListComponent, DepartmentsComponent, AislesComponent, EditDepartmentComponent, EditAislesComponent, CreateOrdersComponent, WhensBestTimeOrderComponent, ComponentComponent, ItemsFreqPurchasedComponent
   ],
   imports: [
     BrowserModule,
