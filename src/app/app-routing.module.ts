@@ -15,11 +15,17 @@ import { AislesComponent } from './pages/aisles/aisles.component';
 import { DepartmentsComponent } from './pages/departments/departments.component';
 import { EditDepartmentComponent } from './pages/departments/edit-department/edit-department.component';
 import { EditAislesComponent } from './pages/aisles/edit-aisles/edit-aisles.component';
+import { WhensBestTimeOrderComponent } from './pages/whens-best-time-order/whens-best-time-order.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+   {
+    path: 'besttimeorder',
+    component: WhensBestTimeOrderComponent,canActivate: [
+      AuthGuard,AdminGuard]
   },
     {
     path: 'editaisle',
@@ -28,7 +34,7 @@ const routes: Routes = [
   {
     path: 'departments',
     component: DepartmentsComponent,  canActivate: [
-      AuthGuard,AdminGuard
+      AuthGuard,AdminGuard]
   },
    {
     path: 'editdepartments',
@@ -41,10 +47,6 @@ const routes: Routes = [
     component: AdminProductListComponent,canActivate: [
       AuthGuard,AdminGuard
     ]
-  },
-  {
-    path: 'chat',
-    component: HelpAppComponent
   },
   {
     path: 'offered',
@@ -76,6 +78,10 @@ const routes: Routes = [
     path: '**',
     redirectTo: '',
     pathMatch: 'full'
+  },
+   {
+    path: 'chat',
+    component:HelpAppComponent
   },
 
    {
