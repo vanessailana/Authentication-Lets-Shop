@@ -16,11 +16,15 @@ import { DepartmentsComponent } from './pages/departments/departments.component'
 import { EditDepartmentComponent } from './pages/departments/edit-department/edit-department.component';
 import { EditAislesComponent } from './pages/aisles/edit-aisles/edit-aisles.component';
 import { WhensBestTimeOrderComponent } from './pages/whens-best-time-order/whens-best-time-order.component';
+import { ItemsFreqPurchasedComponent } from './pages/items-freq-purchased/items-freq-purchased.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },{
+    path: 'itemsfreqpurchased',
+    component: ItemsFreqPurchasedComponent
   },
    {
     path: 'besttimeorder',
@@ -54,10 +58,15 @@ const routes: Routes = [
   },
 
  {
-    path: 'create',
-    component: CreateProductComponent
+    path: 'chat',
+    component: HelpAppComponent
   },
+{
+    path: 'create',
+    component: CreateProductComponent, canActivate: [AdminGuard, AuthGuard
 
+    ]
+  },
   {
     path: 'callback',
     component: CallbackComponent
@@ -79,11 +88,6 @@ const routes: Routes = [
     redirectTo: '',
     pathMatch: 'full'
   },
-   {
-    path: 'chat',
-    component:HelpAppComponent
-  },
-
    {
     path:'calc',
     component: CalculatorComponent,  canActivate: [
