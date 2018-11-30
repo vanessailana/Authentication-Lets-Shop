@@ -22,6 +22,7 @@ export class AuthService {
   userProfile: any;
   expiresAt: number;
   isAdmin: boolean;
+  isRegUser:boolean;
   // Create a stream of logged in status to communicate throughout app
   loggedIn: boolean;
   loggedIn$ = new BehaviorSubject<boolean>(this.loggedIn);
@@ -84,6 +85,7 @@ export class AuthService {
     if (profile) {
       this.userProfile = profile;
       this.isAdmin = this._checkAdmin(profile);
+      this.isRegUser=this._checkUserStatus(profile);
     }
     // Update login status in loggedIn$ stream
     this.setLoggedIn(true);
@@ -95,7 +97,15 @@ export class AuthService {
   private _checkAdmin(profile) {
     // Check if the user has admin role
     const roles = profile[AUTH_CONFIG.NAMESPACE] || [];
-    return roles.indexOf('admin') > -1;
+    return roles.indexOf('admin') > -1 &&
+     this.router.navigate(['/chat']);
+  }
+   private _checkUserStatus(profile) {
+    // Check if the user has admin role
+    const roles = profile[AUTH_CONFIG.NAMESPACE] || [];
+    console.log('ugly');
+    return roles.indexOf('user') > -1  &&
+     this.router.navigate(['/offered']);
   }
 
   private _redirect() {
@@ -106,11 +116,7 @@ export class AuthService {
     const navArr = [redirectArr[0] || '/'];
     const tabObj = redirectArr[1] ? { queryParams: { tab: redirectArr[1] }} : null;
 
-    if (!tabObj) {
-      this.router.navigate(navArr);
-    } else {
-      this.router.navigate(navArr, tabObj);
-    }
+
     // Redirection completed; clear redirect from storage
     this._clearRedirect();
   }

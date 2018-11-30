@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin.component';
-import { AuthGuard } from './auth/auth.guard';
-import { AdminGuard } from './auth/admin.guard';
 // Page components
 import { HomeComponent } from './pages/home/home.component';
 import { CallbackComponent } from './pages/callback/callback.component';
@@ -28,8 +26,7 @@ const routes: Routes = [
   },
    {
     path: 'besttimeorder',
-    component: WhensBestTimeOrderComponent,canActivate: [
-      AuthGuard,AdminGuard]
+    component: WhensBestTimeOrderComponent
   },
     {
     path: 'editaisle',
@@ -37,20 +34,15 @@ const routes: Routes = [
   },
   {
     path: 'departments',
-    component: DepartmentsComponent,  canActivate: [
-      AuthGuard,AdminGuard]
+    component: DepartmentsComponent
   },
    {
     path: 'editdepartments',
-    component: EditDepartmentComponent, canActivate: [
-      AuthGuard,AdminGuard
-    ]
+    component: EditDepartmentComponent
   },
    {
     path: 'adminproductpanel',
-    component: AdminProductListComponent,canActivate: [
-      AuthGuard,AdminGuard
-    ]
+    component: AdminProductListComponent
   },
   {
     path: 'offered',
@@ -63,24 +55,17 @@ const routes: Routes = [
   },
 {
     path: 'create',
-    component: CreateProductComponent, canActivate: [AdminGuard, AuthGuard
-
-    ]
+    component: CreateProductComponent
   },
   {
     path: 'callback',
     component: CallbackComponent
   },
     {
-    path: 'admin', component:AdminComponent,
-    canActivate: [AdminGuard, AuthGuard
-
-    ]
+    path: 'admin', component:AdminComponent
   },
   {
-    path: 'aisles', component:AislesComponent, canActivate: [AdminGuard, AuthGuard
-
-    ]
+    path: 'aisles', component:AislesComponent
 
   },
   {
@@ -90,9 +75,7 @@ const routes: Routes = [
   },
    {
     path:'calc',
-    component: CalculatorComponent,  canActivate: [
-      AuthGuard
-    ]
+    component: CalculatorComponent
   }
 
 ];
@@ -100,8 +83,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   providers: [
-    AuthGuard,
-    AdminGuard
+
   ],
   exports: [RouterModule]
 })

@@ -58,16 +58,14 @@
   <nav id="nav" class="nav" role="navigation">
     <ul class="nav-list">
  <a  type="button" class="btn btn-primary btn-lg"
-          routerLink="/calc" *ngIf="auth.loggedIn && !auth.isAdmin"
+          routerLink="/calc"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }">Calculator <i class="fa fa-calculator"></i></a>
           &nbsp;
-        <a  type="button"   *ngIf="auth.loggedIn && !auth.isAdmin" class="btn btn-primary btn-lg" routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLink="/chat" >Need Help? <i class='fa fa-comment'></i></a>
+
           &nbsp;
 <div class="container">
-<a type="button" *ngIf="auth.loggedIn && auth.isAdmin" class="btn btn-primary btn-lg"
+<a type="button" *ngIf="auth.loggedIn" class="btn btn-primary btn-lg"
 
           routerLink="/admin"
           routerLinkActive="active"

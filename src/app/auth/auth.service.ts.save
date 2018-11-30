@@ -102,7 +102,7 @@ export class AuthService {
       this.refreshSub.unsubscribe();
     }
 
-  
+
   private _setSession(authResult, profile?) {
     this.expiresAt = (authResult.expiresIn * 1000) + Date.now();
     // Store expiration in local storage to access in constructor
@@ -112,6 +112,7 @@ export class AuthService {
     if (profile) {
       this.userProfile = profile;
       this.isAdmin = this._checkAdmin(profile);
+       this.router.navigate(['/createprod']);
     }
     // Update login status in loggedIn$ stream
     this.setLoggedIn(true);
@@ -146,4 +147,4 @@ export class AuthService {
       if (authResult && authResult.accessToken) {
         this._getProfile(authResult);
       } else {
-       
+
